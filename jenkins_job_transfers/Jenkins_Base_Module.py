@@ -570,7 +570,6 @@ def parse_arguments():
         print(f"Error parse_arguments: {e}")
 
 
-'''
 if __name__ == "__main__":
 
     # Get these values from the Environment
@@ -579,15 +578,16 @@ if __name__ == "__main__":
 
         action = os.environ['Publish']
         list_name = os.environ['Publish_List']
-        production_url = os.environ['Production_URL']
-        interim_url = os.environ['Interim_URL']
         args = parse_arguments()
         function = args.function
 
         # Credentials used for Jenkins Server Connection
-        production_username = "buildmgr@tallysolutions.com"
-        interim_username = "buildmgr@tallysolutions.com"
-        password = "Bm1v1414"
+        production_url = ""
+        interim_url = ""
+        production_username = ""
+        interim_username = ""
+        production_password = ""
+        interim_password = ""
 
         list_name = list_name.split(',')
         list_name = [job.strip() for job in list_name if job]
@@ -597,7 +597,7 @@ if __name__ == "__main__":
             exit(1)
 
         production_conn, interim_conn = establish_connection_to_servers(production_url, interim_url, production_username,
-                                                                        interim_username, password)
+                                                                        interim_username, production_password, interim_password)
 
         plugins_to_install_production = plugin_differences(production_conn, interim_conn)
 
@@ -707,6 +707,3 @@ if __name__ == "__main__":
 
     except Exception as e:
         print("Exception in Main Function: ", e)
-        
-        
-'''
