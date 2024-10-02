@@ -1,0 +1,30 @@
+# Distributions and Packaging
+*.egg-info/
+
+# Virtual Environments
+venv/
+.venv/
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+*.cover
+*.py,cover
+.cache
+nosetests.xml
+coverage.xml
+*.log
+
+# Environment variables
+.env
+.env.*
+
+# IDEs
+.idea/
+.vscode/
+*.swp
+
+# Logs
+*.log

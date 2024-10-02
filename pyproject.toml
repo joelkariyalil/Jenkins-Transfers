@@ -4,21 +4,24 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "Context-Aware-Jenkins-Job-Transfers"
-version = "1.0.3"
+version = "1.0.4b1"
 description = "Transfers Jobs b/w Jenkins Servers with relevant Views & Plugins"
 readme = "README.md"
 license = {text = "MIT License"}
 authors = [
-    {name = "Joel Thomas Chacko", email = "joeltc071@gmail.com"}
+    {
+        name = "Joel Thomas Chacko", email = "joeltc071@gmail.com"}
 ]
 maintainers = [
-    {name = "Joel Thomas Chacko", email = "joelkariyalil@gmail.com"}
+    {
+        name = "Joel Thomas Chacko", email = "joelkariyalil@gmail.com"}
 ]
 
 dependencies = [
     "python-jenkins==1.8.2",
     "lxml==5.1.0",
-    "rich==13.7.1"
+    "rich==13.7.1",
+    "pytest==8.3.3"
 ]
 requires-python = ">=3.6"
 classifiers = [
